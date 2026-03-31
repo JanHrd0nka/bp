@@ -1,0 +1,65 @@
+\chapter{Data Mining}
+
+\section{Knowledge Discovery in Databases}
+
+Knowledge Discovery in Databases (KDD) refers to the overall process of discovering useful knowledge from data. It is an interactive and iterative process that goes beyond simple computation, aiming to identify patterns that are valid, novel, useful, and understandable.
+The main stages of the KDD process include
+
+\begin{enumerate}
+\item Learning the application domain - understanding the goals and relevant prior knowledge.
+\item Creating a target dataset – selecting relevant data or focusing on subsets of variables.
+\item Data cleaning and preprocessing – handling missing values, removing noise, and preparing data for analysis.
+\item Data reduction and transformation – selecting useful features, reducing dimensionality, and finding appropriate representations.
+\item Choosing the data mining task – deciding on objectives such as classification, regression, clustering, or summarization.
+\item Selecting data mining algorithms – picking suitable methods and models for the task.
+\item Data mining – applying algorithms to discover patterns or models in the data.
+\item Interpretation and evaluation – analyzing, visualizing, and validating the discovered patterns.
+\item Using discovered knowledge – applying insights in practice or reporting results.
+\end{enumerate}
+
+Proper execution of all these steps ensures that the knowledge obtained is meaningful and actionable, avoiding meaningless or misleading patterns~\parencite{Fayyad1996}.
+
+\section{Introduction to Data Mining}
+
+Rapid advances in data collection and storage technologies have enabled organizations to accumulate vast amounts of data. However, extracting useful information from these data has become increasingly challenging. Data mining therefore represents an approach that combines traditional data analysis methods with advanced algorithms for processing large volumes of data. It is applied across many domains, including business, medicine, science, engineering, and more~\parencite{Tan2014}.
+
+\section{Definition of Data Mining}
+
+The exact definition of data mining varies due to its interdisciplinary nature. It is commonly defined as the process of discovering interesting patterns, correlations, and useful knowledge from datasets. Some authors suggest that a more precise term would be knowledge mining from data, although the shorter term data mining has become widely adopted~\parencite{Han2012}. An important characteristic of data mining is the ability to efficiently analyze large volumes of data. The extracted knowledge may include relationships between variables, trends, or predictive models that can support decision-making.
+
+\section{Attributes}
+
+A dataset consists of a collection of instances. Each instance is described by a fixed, predefined set of attributes. Attributes characterize instances and take specific values. However, not all attributes need to have values for every instance. This can happen due to missing data or when the presence of one attribute depends on the value of another one~\parencite{Witten2020}. In the example below, the attribute Years Married is not applicable to Anna because it depends on the attribute Married. 
+
+\begin{table}[h!]
+\centering
+\begin{threeparttable}
+\caption{Employees' marital status and related attributes}
+\label{tab:employees}
+\begin{tabular}{c l c c c c}
+\hline
+UID & Name & Age & Salary & Married & Years Married \\
+\hline
+1 & Peter & 30 & 50--59 & Yes & 5 \\
+2 & Anna & 24 & 40--49 & No & -- \\
+3 & Heather & 49 & 59--60 & Yes & 27 \\
+\hline
+\end{tabular}
+\begin{tablenotes}
+\item \textit{Source: Author.}
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+Each attribute can be characterized by type. Continuous (numeric) attributes measure either real or integer values (as in the Age and Years Married). Categorical (nominal) attributes contain a list of predefined possible values. (as in the Salary and Married). A special case of categorical attributes with only two possible values, typically true/false or yes/no, is called a Boolean (dichotomous) attribute, as in Married~\parencite{Witten2020}.
+
+\section{What Kinds of Data Can Be Mined}
+
+Data mining can be applied to many types of data, as long as they are relevant to a specific application. The main categories include: Database Data – stored in tables, where columns represent attributes and rows represent individual instances; Data Warehouses – collected from multiple sources, often organized into multidimensional structures (data cubes) for easy filtering and analysis; Transactional Data – generated from transactions such as customer purchases, flight bookings, or user clicks on web pages; and Other Kinds of Data.
+The Other Kinds of Data may include time-related or sequence data (e.g., stock market trends), data streams (e.g., video surveillance data), spatial data (e.g., maps), engineering design data (e.g., integrated circuits), hypertext and multimedia data, graph and networked data or information from the web. These data often lack predefined structures, which makes processing and extracting patterns more challenging. ~\parencite{Han2012}. 
+
+\section{Data Mining Tasks}
+
+Data mining tasks can generally be divided into two categories: descriptive and predictive. Descriptive tasks aim to identify patterns and relationships within a dataset. Predictive tasks aim to predict certain attributes, often referred to as target attributes, for new or unseen data instances~\parencite{Han2012}.
+Common predictive data mining tasks include classification – a process of learning a function that assigns instances to one of several predefined classes, and regression – a process of learning a function that predicts a continuous target attribute~\parencite{Fayyad1996}.
+Common descriptive data mining tasks include clustering – grouping instances into clusters, intended to maximize similarity within each cluster and minimize similarities between clusters; outlier detection – an outlier is a data instance that does not comply with the general behavior of the majority of instances. Most data mining methods consider these outliers as noise or exceptions. However, outlier analysis may be useful in applications such as fraud detection; frequent patterns – discovering frequent patterns in the data, e.g., association and action rules~\parencite{Han2012}.

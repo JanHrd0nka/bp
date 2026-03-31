@@ -1,0 +1,90 @@
+%%% Titulní strana práce a další povinné informační strany
+
+%%% Titulní strana práce
+
+\pagestyle{empty}
+\hypersetup{pageanchor=false}
+
+\begin{center}
+\Huge\sffamily
+Prague University of Economics and Business\\
+Faculty of Informatics and Statistics
+
+\vspace{\stretch{1}}
+
+\includegraphics[width=.3\textwidth]{img/logo-FIS}
+
+\vspace{\stretch{2}}
+
+\bfseries\NazevPrace
+
+\vspace{8mm}
+\mdseries\TypPrace
+
+\vspace{8mm}
+\large
+\begin{tabular}{rl}
+Degree Program: & \StudijniProgram \\
+\noalign{\vspace{2mm}}
+\end{tabular}
+
+\vspace{\stretch{8}}
+
+\begin{tabular}{rl}
+Author: & \AutorPrace \\
+\noalign{\vspace{2mm}}
+Supervisor: & \Vedouci \\
+\end{tabular}
+
+\vspace{8mm}
+Prague, \DatumOdevzdani
+\end{center}
+
+
+\openright
+
+%%% Strana s čestným prohlášením k bakalářské práci
+
+\hypersetup{pageanchor=true}
+\pagestyle{plain}
+\cleardoublepage
+\vspace*{\fill}
+\section*{Prohlášení}
+\noindent
+\Prohlaseni
+
+\vspace{2cm}
+\noindent
+V Praze dne DD. měsíc RRRR
+\hfill%
+\begin{minipage}[t]{.5\textwidth}%
+\begin{center}
+\dotfill\\
+Podpis studenta
+\end{center}
+\end{minipage}
+\vspace{1cm}
+
+%%% Poděkování
+\openright
+\vspace*{\fill}
+\section*{Poděkování}
+TODO
+\noindent
+\Podekovani
+\vspace{1cm}
+
+
+%%% Povinná informační strana bakalářské práce
+\openright
+
+\section*{Abstract}
+TODO
+\noindent
+\AbstraktEN
+\subsection*{Keywords}
+TODO
+\noindent
+\KlicovaSlovaEN
+
+\openright
